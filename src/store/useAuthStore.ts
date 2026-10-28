@@ -49,7 +49,7 @@ export const useAuthStore = create<AuthState>()(
         });
       },
 
-      esAdmin: () => get().usuarioRol === "admin",
+      esAdmin: () => get().usuarioRol?.toLowerCase() === "admin",
     }),
     {
       name: "mercado-auth-storage",
